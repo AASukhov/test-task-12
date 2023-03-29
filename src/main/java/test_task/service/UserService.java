@@ -16,6 +16,8 @@ import test_task.entity.User;
 import test_task.repository.UserRepository;
 import test_task.security.AuthTokenGenerator;
 
+import java.util.List;
+
 @Service
 public class UserService {
 

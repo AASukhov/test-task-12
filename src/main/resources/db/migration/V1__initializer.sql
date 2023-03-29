@@ -14,4 +14,13 @@ CREATE TABLE IF NOT EXISTS tasks (
      text VARCHAR(255),
      status VARCHAR(15),
      PRIMARY KEY (id)
+);
+
+CREATE TABLE IF NOT EXISTS histories (
+    id INTEGER AUTO_INCREMENT,
+    task_id INTEGER,
+    userto INTEGER,
+    status VARCHAR(15),
+    date VARCHAR(60),
+    PRIMARY KEY (id)
 )

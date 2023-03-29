@@ -2,6 +2,7 @@ package test_task.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import test_task.dto.HistoryDTO;
 import test_task.dto.TaskRequestDTO;
 import test_task.dto.TaskResponseDTO;
 import test_task.entity.Task;
@@ -28,5 +29,10 @@ public class TaskController {
     @GetMapping("/list")
     public List<TaskResponseDTO> getTasks (@RequestHeader ("token") String token) {
         return service.getTasks(token);
+    }
+
+    @GetMapping("/history")
+    public List<HistoryDTO> getHistory (@RequestHeader ("token") String token) {
+        return service.getHistory(token);
     }
 }
